@@ -22,5 +22,5 @@ fn is_prime2(primes: &Vec<u32>, number: u32) -> bool{
 fn is_prime(primes: &Vec<u32>, number: u32) -> bool{
     !primes.iter()
         .take_while(|&&n| ((number as f64).sqrt() as u32) >= n ) //Optimization
-        .any(|a| number%a == 0) // if any number is divisible with paramter return
+        .any(|a| number%a == 0) // if any number is divisible with parameter return
 }
