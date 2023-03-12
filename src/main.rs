@@ -12,13 +12,6 @@ fn main() {
     println!("{:?}",primes.len());
 }
 
-fn is_prime2(primes: &Vec<u32>, number: u32) -> bool{
-    primes.iter()
-        .take_while(|n| ((number as f64).sqrt() as u32) >= **n )
-        .map(|m| number % m == 0)
-        .all(|b| b == false)
-}
-
 fn is_prime(primes: &Vec<u32>, number: u32) -> bool{
     !primes.iter()
         .take_while(|&&n| ((number as f64).sqrt() as u32) >= n ) //Optimization
